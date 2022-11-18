@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f9f9fd;
+  }
+  
+  .box {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: tomato;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  
+    /*  Задаём значения перехода  */
+    transition-property: background-color, transform;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+  }
+
+  /* При ховере меняем значения анимируемых свойств */
+     .box:hover {
+    background-color: teal;
+    transform: rotate(150deg);
+  }
+
+
+  .box1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: tomato;
+    background-color: teal;
+    transition-property: background-color;
+    transition-duration: 1000ms;
+  }
+
+  .box1:hover {
+    background-color: orange;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  
+    transform: translatex(0);
+    transition-property: transform;
+    transition-duration: 2000ms;
+  }
+  
+  .circle:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  
+  .container:hover .circle {
+    transform: translatex(calc(100vw - 86px));
+  }
+  
+  .circle:nth-child(1) {
+    background-color: #f44336;
+    transition-timing-function: linear;
+  }
+  
+  .circle:nth-child(2) {
+    background-color: #3f51b5;
+    transition-timing-function: ease;
+  }
+  
+  .circle:nth-child(3) {
+    background-color: #00bcd4;
+    transition-timing-function: ease-in;
+  }
+  
+  .circle:nth-child(4) {
+    background-color: #4caf50;
+    transition-timing-function: ease-out;
+  }
+  
+  .circle:nth-child(5) {
+    background-color: #ffeb3b;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .circle:nth-child(6) {
+    background-color: #e91e63;
+    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+  }
+  
